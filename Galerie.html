@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Galerie – Louis Rigomont</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            background: #111;
+            color: #eee;
+            text-align: center;
+        }
+
+        header {
+            padding: 50px 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+
+        .tiles {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto 50px auto;
+            padding: 0 20px;
+        }
+
+        .tile {
+            background: #222;
+            border: 1px solid #333;
+            padding: 60px 20px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+            color: #eee;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .tile:hover {
+            background: #333;
+        }
+
+        a.back {
+            display: inline-block;
+            margin-top: 40px;
+            color: #eee;
+            text-decoration: none;
+            border: 1px solid #eee;
+            padding: 10px 20px;
+            transition: 0.3s;
+        }
+
+        a.back:hover {
+            background: #333;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Thème</h1>
+</header>
+
+<section class="tiles">
+    <a class="tile" href="paysages.html">Paysages</a>
+    <a class="tile" href="ornithologie.html">Ornithologie</a>
+    <a class="tile" href="mammalogie.html">Mammalogie</a>
+    <a class="tile" href="entomologie.html">Entomologie</a>
+</section>
+
+<a href="index.html" class="back">Retour à l’accueil</a>
+
+</body>
+</html>

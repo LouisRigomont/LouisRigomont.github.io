@@ -38,13 +38,6 @@
             margin-bottom: 30px;
         }
 
-        p.presentation {
-            max-width: 600px;
-            margin: 0 auto 50px auto;
-            font-size: 18px;
-            line-height: 1.6;
-        }
-
         .tiles {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -70,28 +63,73 @@
             background: #333;
         }
 
+        /* Section photographe */
+        #photographe {
+            display: none; /* caché au départ */
+            max-width: 700px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        #photographe img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid #eee;
+            margin-bottom: 20px;
+        }
+
+        #photographe p {
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #eee;
+        }
+
     </style>
 </head>
 <body>
 
+<!-- Header -->
 <header>
     <h1>Louis Rigomont</h1>
     <h2>Photographe naturaliste</h2>
     <img src="photos/photo_principale.jpg" alt="Louis Rigomont" class="photo-principale">
-    <p class="presentation">
-        Passionné par la nature depuis mon plus jeune âge, j’ai développé à l’adolescence le goût d’immortaliser mes observations grâce à la photographie de la faune et de la flore.<br>
-        La Brenne a d’abord été mon premier centre d’intérêt, puis mon horizon s’est élargi à la faune et l’avifaune de toute la France.<br>
-        Étudiant en Master dans le domaine de la Gestion des Écosystèmes de Montagne, le littoral fut, durant mon cursus, ma zone de jeu favorite.<br>
-        J’espère que ma passion saura vous transporter à travers mes images.
-    </p>
 </header>
 
+<!-- Tuiles -->
 <section class="tiles">
     <a class="tile" href="#photographe">Photographe</a>
     <a class="tile" href="galerie.html">Galerie</a>
     <a class="tile" href="#reseaux">Réseaux</a>
     <a class="tile" href="#contact">Contact</a>
 </section>
+
+<!-- Section Photographe -->
+<section id="photographe">
+    <img src="photos/photo_photographe.jpg" alt="Photographe Louis Rigomont">
+    <p>
+        Passionné par la nature depuis mon plus jeune âge, j’ai développé à l’adolescence le goût d’immortaliser mes observations grâce à la photographie de la faune et de la flore.<br>
+        La Brenne a d’abord été mon premier centre d’intérêt, puis mon horizon s’est élargi à la faune et l’avifaune de toute la France.<br>
+        Étudiant en Master dans le domaine de la Gestion des Écosystèmes de Montagne, le littoral fut, durant mon cursus, ma zone de jeu favorite.<br>
+        J’espère que ma passion saura vous transporter à travers mes images.
+    </p>
+</section>
+
+<script>
+    // Afficher la section Photographe quand on clique sur la tuile
+    document.querySelectorAll('.tile').forEach(tile => {
+        tile.addEventListener('click', function(e) {
+            if(this.getAttribute('href') === "#photographe") {
+                e.preventDefault(); // empêche le saut automatique
+                const section = document.getElementById('photographe');
+                section.style.display = 'block';
+                section.scrollIntoView({behavior: "smooth"});
+            }
+        });
+    });
+</script>
 
 </body>
 </html>

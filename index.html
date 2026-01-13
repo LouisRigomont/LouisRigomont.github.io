@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Louis – Photographie naturaliste</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            background: #111;
+            color: #eee;
+            text-align: center;
+        }
+        header {
+            padding: 60px 20px;
+        }
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 40px;
+        }
+        .cat {
+            border: 1px solid #333;
+            padding: 40px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .cat:hover {
+            background: #222;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Louis – Photographie naturaliste</h1>
+    <p>Paysages · Mammifères · Ornithologie · Entomologie</p>
+</header>
+
+<section class="categories">
+    <div class="cat">Paysages</div>
+    <div class="cat">Mammifères</div>
+    <div class="cat">Ornithologie</div>
+    <div class="cat">Entomologie</div>
+</section>
+
+</body>
+</html>
